@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>NavigationButtonEvents</name>
+    <events>
+        <event-block sid="5914955679638957">
+            <conditions>
+                <condition id="17" name="On tap object" sid="3671420207557547" type="Touch">
+                    <param id="0" name="Object">GoToLayerButton</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5607318107100224" type="GoToLayerButton">
+                    <param id="0" name="Instance variable">isMenuButton</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="8073977260429576" type="System">
+                    <param id="0" name="Layout">GoToLayerButton.GoToLayer</param>
+                </action>
+                <action id="12" name="Vibrate" sid="9695969123124769" type="Browser">
+                    <param id="0" name="Pattern">&quot;200&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7106679907130191">
+            <conditions>
+                <condition id="17" name="On tap object" sid="3406877058191266" type="Touch">
+                    <param id="0" name="Object">GoToLayerButton</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9488709284526014" type="GoToLayerButton">
+                    <param id="0" name="Instance variable">isMenuButton</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">unlockedLevels</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4257503689829161" type="System">
+                    <param id="0" name="Layout">GoToLayerButton.GoToLayer</param>
+                </action>
+                <action id="12" name="Vibrate" sid="8980722107460484" type="Browser">
+                    <param id="0" name="Pattern">&quot;200&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7042151427484635">
+            <conditions>
+                <condition behavior="Fade" id="1" name="On fade-in finished" sid="4759587125618256" type="EmptyPiece" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="5726709820368194" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="6372979512556779" type="WinButton" />
+            </actions>
+        </event-block>
+        <event-block sid="5036981113672366">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2124042502739844" type="Touch">
+                    <param id="0" name="Object">WinButton</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="6018092252362371" type="WinButton">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1235991119859782" type="System">
+                    <param id="0" name="Layout">LevelSelector</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1547941013729389">
+            <conditions>
+                <condition id="17" name="On tap object" sid="1573216186167152" type="Touch">
+                    <param id="0" name="Object">BackToSelector</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5749295196347779" type="System">
+                    <param id="0" name="Layout">LevelSelector</param>
+                </action>
+                <action id="12" name="Vibrate" sid="509064227995693" type="Browser">
+                    <param id="0" name="Pattern">&quot;200&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2049688912724442">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5306464553785012" type="GoToLayerButton">
+                    <param id="0" name="Instance variable">isMenuButton</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">unlockedLevels</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1146172272308106" type="GoToLayerButton">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

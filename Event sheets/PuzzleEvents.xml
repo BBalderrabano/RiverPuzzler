@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PuzzleEvents</name>
+    <events>
+        <variable comment="The number of unlocked level" constant="0" name="unlockedLevels" sid="7426977726415519" static="0" type="number">1</variable>
+        <include>NavigationButtonEvents</include>
+        <variable comment="Fix for the positioning of the puzzle pieces" constant="0" name="offsetX" sid="3727406566624772" static="0" type="number">0</variable>
+        <variable comment="Fix for the positioning of the puzzle pieces" constant="0" name="offsetY" sid="7834230852791319" static="0" type="number">0</variable>
+        <variable comment="The size in pixels of the width and height of the puzzle pieces" constant="0" name="magicNumber" sid="5092235953162167" static="0" type="number">115</variable>
+        <variable constant="0" name="swapX" sid="3501538526699197" static="0" type="number">0</variable>
+        <variable constant="0" name="swapY" sid="8307122034199988" static="0" type="number">0</variable>
+        <comment>Initialization</comment>
+        <event-block sid="5700537455297978">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3807871500419466" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2360460906004733" type="System">
+                    <param id="0" name="Variable">magicNumber</param>
+                    <param id="1" name="Value">PuzzlePieces.width</param>
+                </action>
+                <action id="-10" name="Set value" sid="9634869323986071" type="PuzzlePieces">
+                    <param id="0" name="Instance variable">originX</param>
+                    <param id="1" name="Value">self.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="9674377004929624" type="PuzzlePieces">
+                    <param id="0" name="Instance variable">originY</param>
+                    <param id="1" name="Value">self.Y</param>
+                </action>
+                <action id="-5" name="Set width" sid="2179137868817995" type="PuzzlePieces">
+                    <param id="0" name="Width">magicNumber</param>
+                </action>
+                <action id="-6" name="Set height" sid="4826516311876029" type="PuzzlePieces">
+                    <param id="0" name="Height">magicNumber</param>
+                </action>
+                <action id="6" name="Set speed" sid="3340656228060739" type="PuzzlePieces">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="3439857392969609" type="System">
+                    <param id="0" name="Variable">offsetX</param>
+                    <param id="1" name="Value">magicNumber - EmptyPiece.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="2183463694748566" type="System">
+                    <param id="0" name="Variable">offsetY</param>
+                    <param id="1" name="Value">magicNumber - EmptyPiece.Y</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="3571334693358367" type="EmptyPiece">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>Mix the tiles up</comment>
+                <event-block sid="780413884119491">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="1611629650438461" type="System">
+                            <param id="0" name="Count">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="7733251964330749" type="PuzzlePieces">
+                            <param id="0" name="Instance variable">inRange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5663201348673176">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="4206432674459753" type="System">
+                                    <param id="0" name="Object">PuzzlePieces</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2569557170557648" type="System">
+                                    <param id="0" name="First value">distance(PuzzlePieces.X, PuzzlePieces.Y, EmptyPiece.X, EmptyPiece.Y)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">magicNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5981485789388143" type="PuzzlePieces">
+                                    <param id="0" name="Instance variable">inRange</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9523168988796534">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9954767745079896" type="PuzzlePieces">
+                                    <param id="0" name="Instance variable">inRange</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="9330894073548551" type="System">
+                                    <param id="0" name="Object">PuzzlePieces</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9208044427089759" type="System">
+                                    <param id="0" name="Variable">swapX</param>
+                                    <param id="1" name="Value">PuzzlePieces.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5003828674734195" type="System">
+                                    <param id="0" name="Variable">swapY</param>
+                                    <param id="1" name="Value">PuzzlePieces.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="4240830460938274" type="PuzzlePieces">
+                                    <param id="0" name="Object">EmptyPiece</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="6836190574208864" type="EmptyPiece">
+                                    <param id="0" name="X">swapX</param>
+                                    <param id="1" name="Y">swapY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Movement</comment>
+        <variable constant="0" name="xoffset" sid="1470277435238335" static="0" type="number">0</variable>
+        <variable constant="0" name="yoffset" sid="8834268321350366" static="0" type="number">0</variable>
+        <variable constant="0" name="drag_dx" sid="5641466826644026" static="0" type="number">0</variable>
+        <variable constant="0" name="drag_dy" sid="5138893899667178" static="0" type="number">0</variable>
+        <event-block sid="150312304469885">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6619222664754976" type="Touch">
+                    <param id="0" name="Object">PuzzlePieces</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1100291217650928" type="System">
+                    <param id="0" name="First value">distance(PuzzlePieces.X, PuzzlePieces.Y, EmptyPiece.X, EmptyPiece.Y)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">magicNumber</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="670244069391219" type="System">
+                    <param id="0" name="Variable">swapX</param>
+                    <param id="1" name="Value">PuzzlePieces.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="4886225974486432" type="System">
+                    <param id="0" name="Variable">swapY</param>
+                    <param id="1" name="Value">PuzzlePieces.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="1750080677939871" type="System">
+                    <param id="0" name="Variable">drag_dx</param>
+                    <param id="1" name="Value">PuzzlePieces.X - EmptyPiece.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="4655867783497455" type="System">
+                    <param id="0" name="Variable">drag_dy</param>
+                    <param id="1" name="Value">PuzzlePieces.Y - EmptyPiece.Y</param>
+                </action>
+                <action id="-9" name="Set value" sid="9951976703190644" type="System">
+                    <param id="0" name="Variable">xoffset</param>
+                    <param id="1" name="Value">Touch.X - PuzzlePieces.X</param>
+                </action>
+                <action id="-9" name="Set value" sid="1843031371505352" type="System">
+                    <param id="0" name="Variable">yoffset</param>
+                    <param id="1" name="Value">Touch.Y - PuzzlePieces.Y</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="8647744503676016" type="PuzzlePieces" />
+                <action id="-4" name="Set position to another object" sid="7640055219885469" type="PuzzlePieces">
+                    <param id="0" name="Object">EmptyPiece</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="8272656056810196" type="EmptyPiece">
+                    <param id="0" name="X">swapX</param>
+                    <param id="1" name="Y">swapY</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="2455839644012444" type="SoundEffects">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">random(0,10) &gt; 5 ? &quot;Swipe1_By_f4angry&quot; : &quot;Swipe2_By_f4angry&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Text and win conditions</comment>
+        <event-block sid="7369208701090787">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3707953290520919" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="9451677645080393" type="CorrectCount">
+                    <param id="0" name="Instance variable">Right_Numbers</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8481146565634166">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="9936799649321894" type="PuzzlePieces">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="X co-ordinate">self.originX</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="6050719479444793" type="PuzzlePieces">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Y co-ordinate">self.originY</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="1860856932166842" type="System">
+                    <param id="0" name="Object">PuzzlePieces</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="6604267114115898" type="CorrectCount">
+                    <param id="0" name="Instance variable">Right_Numbers</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3454254527013201">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="673385517202435" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="3713144526356311" type="CorrectCount">
+                    <param id="0" name="Instance variable">Right_Numbers</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">magicNumber = 115 ? 15 : 8</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="6463487402040702" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1579888782353224" type="CorrectCount">
+                    <param id="0" name="Text">&quot;Number Right: &quot; &amp; self.Right_Numbers</param>
+                </action>
+                <action id="5" name="Set frame" sid="8913474979755534" type="EmptyPiece">
+                    <param id="0" name="Frame number">LayoutName = &quot;Puzzle1&quot; ? 1 : LayoutName = &quot;Puzzle2&quot; ? 2 : LayoutName = &quot;Puzzle3&quot; ? 3 : LayoutName = &quot;Puzzle4&quot; ? 4 : 0</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="6394089848050394" type="EmptyPiece" />
+                <action id="-10" name="Add to" sid="2745528694744045" type="System">
+                    <param id="0" name="Variable">unlockedLevels</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set item" sid="5822093661331374" type="LocalStorage">
+                    <param id="0" name="Key">&quot;unlockedLevel&quot;</param>
+                    <param id="1" name="Value">unlockedLevels</param>
+                </action>
+                <action id="0" name="Play" sid="2034784989661596" type="SoundEffects">
+                    <param id="0" name="Audio file">VictoriaRiverPuzzle</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7049497901366609">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5392332408336764" type="Touch">
+                    <param id="0" name="Object">ReshuffleButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="12" name="Vibrate" sid="6785073945394053" type="Browser">
+                    <param id="0" name="Pattern">&quot;200&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3393815852370511">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="7599582844811701" type="System">
+                            <param id="0" name="Count">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2430217305444002" type="PuzzlePieces">
+                            <param id="0" name="Instance variable">inRange</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9201983755754802">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="1524855840332108" type="System">
+                                    <param id="0" name="Object">PuzzlePieces</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="5467634243224841" type="System">
+                                    <param id="0" name="First value">distance(PuzzlePieces.X, PuzzlePieces.Y, EmptyPiece.X, EmptyPiece.Y)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">magicNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5747162528272454" type="PuzzlePieces">
+                                    <param id="0" name="Instance variable">inRange</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="577512563730127">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="234249499114567" type="PuzzlePieces">
+                                    <param id="0" name="Instance variable">inRange</param>
+                                </condition>
+                                <condition id="-16" name="Pick random instance" sid="8989912162343957" type="System">
+                                    <param id="0" name="Object">PuzzlePieces</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1818940709453482" type="System">
+                                    <param id="0" name="Variable">swapX</param>
+                                    <param id="1" name="Value">PuzzlePieces.X</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="613034473582139" type="System">
+                                    <param id="0" name="Variable">swapY</param>
+                                    <param id="1" name="Value">PuzzlePieces.Y</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="7273530508228919" type="PuzzlePieces">
+                                    <param id="0" name="Object">EmptyPiece</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="6612812454236271" type="EmptyPiece">
+                                    <param id="0" name="X">swapX</param>
+                                    <param id="1" name="Y">swapY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

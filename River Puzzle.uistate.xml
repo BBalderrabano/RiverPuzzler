@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">LevelSelector</layout>
+        <layout order="2">StartScreen</layout>
+        <event-sheet active="1" order="0">PuzzleEvents</event-sheet>
+        <event-sheet order="3">NavigationButtonEvents</event-sheet>
+        <event-sheet order="4">LoaderEvents</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="PuzzlePieces" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/PuzzleBackground/" />
+        <folder expanded="1" path="animation-folder/Puzzle1Pieces/" />
+        <folder expanded="1" path="animation-folder/EmptyPiece/" />
+        <folder expanded="1" path="animation-folder/Puzzle2Pieces/" />
+        <folder expanded="1" path="animation-folder/Puzzle3Pieces/" />
+        <folder expanded="1" path="animation-folder/Puzzle4Pieces/" />
+        <folder expanded="1" path="animation-folder/BlackBkg/" />
+        <folder expanded="1" path="animation-folder/RiverLoader/" />
+        <folder expanded="1" path="animation-folder/LoadingBkg/" />
+        <folder expanded="1" path="animation-folder/LoadingBar/" />
+        <folder expanded="1" path="animation-folder/RiverLogo/" />
+        <folder expanded="1" path="animation-folder/StartScreenBkg/" />
+        <folder expanded="1" path="animation-folder/GoToLayerButton/" />
+        <folder expanded="1" path="animation-folder/LevelSelectorBkg/" />
+        <folder expanded="1" path="animation-folder/WinButton/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/BackToSelector/" />
+        <folder expanded="1" path="animation-folder/ReshuffleButton/" />
+    </folders-expanded>
+</c2uistate>

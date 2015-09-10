@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LoaderEvents</name>
+    <events>
+        <event-block sid="5221088658598567">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1219989371112768" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="914303757258476" type="SoundEffects">
+                    <param id="0" name="Audio file">Swipe1_By_f4angy</param>
+                </action>
+                <action id="4" name="Preload" sid="1964797450772743" type="SoundEffects">
+                    <param id="0" name="Audio file">Swipe2_By_f4ngy</param>
+                </action>
+                <action id="4" name="Preload" sid="1091021512969527" type="SoundEffects">
+                    <param id="0" name="Audio file">VictoriaRiverPuzzle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6171070060303938">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="2635631808378051" type="System" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="2105861035125447" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3800506059411186">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6292635137258376" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="5035194721798941" type="LoadingBar">
+                    <param id="0" name="Width">307 - (307*loadingprogress)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5656779973329468">
+            <conditions>
+                <condition id="9" name="On item exists" sid="927798447345936" type="LocalStorage">
+                    <param id="0" name="Key">&quot;unlockedLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="4773895090758513" type="LocalStorage">
+                    <param id="0" name="Key">&quot;unlockedLevel&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8979823400568469">
+            <conditions>
+                <condition id="1" name="On item get" sid="2823855635537268" type="LocalStorage">
+                    <param id="0" name="Key">&quot;unlockedLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="689598915686884" type="System">
+                    <param id="0" name="Variable">unlockedLevels</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

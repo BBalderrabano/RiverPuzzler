@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>River Puzzle</name>
+    <description>Arma el rompecabezas tematico de tu equipo favorito!</description>
+    <version>1.0.0.0</version>
+    <author>Bruno Balderrabano y Mauro Rey</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id>com.scgames.rompezabezas</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>21202</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Danguafer/Silexars" id="pulse">Pulse</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>480</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>LoaderLayout</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">Off</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Percentage text</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="PuzzleBackground" sid="1912214292068035">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1357654480547103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\FondoYMarco.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Puzzle1Pieces" sid="1277222384369386">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="874859351418739" speed="5">
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_01.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_02.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_03.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_04.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_05.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_06.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_07.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_08.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_09.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EmptyPiece" sid="8912546053037559">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="1585553462823356">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="5" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4583537989106381" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\PuzzlesRiverResize_03.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_01.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\asd.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_01.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_03.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="2272325441352879">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="CorrectCount" sid="7093318449150043">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="Right_Numbers" sid="8575238809786778" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Puzzle2Pieces" sid="2837927147528101">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2151310387743345" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_03.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_04.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_05.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_06.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_08.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_09.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_10.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_11.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_12.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_13.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_14.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_15.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_16.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_17.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_18.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta\PuzzlesRiverResize_19.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Puzzle3Pieces" sid="7936208269713917">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4358364730243831" speed="5">
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_01.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.991304" />
+                            <point x="0.00869565" y="0.991304" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_02.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_03.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_04.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_05.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_06.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_07.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_08.png" />
+                    <frame duration="1" hotspotX="0.503268" hotspotY="0.503268" original-source="C:\Users\Bruno\Desktop\Puzzles3x3_09.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Puzzle4Pieces" sid="1539237108856033">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="16" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5792654357661404" speed="5">
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_03.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_04.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_05.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_06.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_08.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_09.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_10.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_11.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_12.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_13.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_14.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_15.png" />
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_16.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.991304" />
+                            <point x="0.00869565" y="0.991304" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_17.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.991304" />
+                            <point x="0.00869565" y="0.991304" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_18.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.991304" />
+                            <point x="0.00869565" y="0.991304" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504348" hotspotY="0.504348" original-source="C:\Users\Bruno\Desktop\images\Nueva carpeta (3)\PuzzlesRiverResize_19.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.991304" y="0.991304" />
+                            <point x="0.00869565" y="0.991304" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlackBkg" sid="4259995053214158">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3941772392906905" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RiverLoader" sid="4029213795530458">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5651926588692448" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadingBkg" sid="5743134919193751">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7859515275335965" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507463" original-source="C:\Users\Bruno\Desktop\LogoEros_0002_LoaderLleno.png">
+                        <collision-poly>
+                            <point x="0.0047619" y="0.0597015" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0047619" y="0.940298" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LoadingBar" sid="1087315492687195">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6666453596553583" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.534884" original-source="C:\Users\Bruno\Desktop\LogoEros_0001_Loadervacio.png">
+                        <collision-poly>
+                            <point x="0.0047619" y="0.0597015" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0047619" y="0.940298" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RiverLogo" sid="6993977281772817">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5442384279325751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502058" original-source="C:\Users\Bruno\Desktop\LogoEros_0000_LogoLoader.png">
+                        <collision-poly>
+                            <point x="0.105769" y="0.090535" />
+                            <point x="0.5" y="0.0823045" />
+                            <point x="0.826923" y="0.148148" />
+                            <point x="0.875" y="0.497942" />
+                            <point x="0.716346" y="0.757202" />
+                            <point x="0.5" y="0.930041" />
+                            <point x="0.115385" y="0.901235" />
+                            <point x="0.0192308" y="0.497942" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StartScreenBkg" sid="5405796207976033">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6575640652215544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\RiverMenus.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GoToLayerButton" sid="3399618514297703">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="The name of the layer that this button goes to" name="GoToLayer" sid="5937696916588218" type="string" />
+                <instance-variable comment="Is the menu supposed to check if its unlocked?" name="isMenuButton" sid="3337557451346209" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3769253710034156" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\Candado_0000_Layer-2.png">
+                        <collision-poly>
+                            <point x="0.301282" y="0.305195" />
+                            <point x="0.5" y="0.201299" />
+                            <point x="0.679487" y="0.324675" />
+                            <point x="0.692308" y="0.5" />
+                            <point x="0.685897" y="0.681818" />
+                            <point x="0.5" y="0.779221" />
+                            <point x="0.294872" y="0.701299" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LevelSelectorBkg" sid="3242838648467712">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8750407894933716" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\RiverGaleria.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinButton" sid="4876448217321019">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="2632036010644973">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9545125843540555" speed="5">
+                    <frame duration="1" hotspotX="0.502164" hotspotY="0.50289" original-source="C:\Users\Bruno\Desktop\BotonVictoria_0000_marco-soccermania-copy.png">
+                        <collision-poly>
+                            <point x="0.030303" y="0.0404624" />
+                            <point x="0.497835" y="0.0115607" />
+                            <point x="0.961039" y="0.0520231" />
+                            <point x="0.974026" y="0.49711" />
+                            <point x="0.95671" y="0.942197" />
+                            <point x="0.038961" y="0.947977" />
+                            <point x="0.012987" y="0.49711" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="1887300005511157">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1123489289446302" speed="5">
+                    <frame duration="1" hotspotX="0.501818" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\RiverBotones_0011_Elegir-Puzzles.png">
+                        <collision-poly>
+                            <point x="0.0181818" y="0.0694444" />
+                            <point x="0.498182" y="0.0277778" />
+                            <point x="0.981818" y="0.0694444" />
+                            <point x="0.981818" y="0.930556" />
+                            <point x="0.498182" y="0.972222" />
+                            <point x="0.0181818" y="0.930556" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackToSelector" sid="7860500885540934">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4500970841501822" speed="5">
+                    <frame duration="1" hotspotX="0.502326" hotspotY="0.508475" original-source="C:\Users\Bruno\Desktop\Boton_0000_Elegir-Puzzle.png">
+                        <collision-poly>
+                            <point x="0.00465116" y="0.0169492" />
+                            <point x="0.497674" y="0" />
+                            <point x="0.995349" y="0.0169492" />
+                            <point x="0.995349" y="0.983051" />
+                            <point x="0.497674" y="1" />
+                            <point x="0.00465116" y="0.983051" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ReshuffleButton" sid="4171615806680209">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8071031050633625" speed="5">
+                    <frame duration="1" hotspotX="0.502347" hotspotY="0.5" original-source="C:\Users\Bruno\Desktop\Boton_0000_barajar-piezas.png">
+                        <collision-poly>
+                            <point x="0.00469484" y="0.02" />
+                            <point x="0.497653" y="0" />
+                            <point x="0.995305" y="0.02" />
+                            <point x="0.995305" y="0.98" />
+                            <point x="0.497653" y="1" />
+                            <point x="0.00469484" y="0.98" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="9724691431819466">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="LocalStorage" sid="1884359818060932">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="SoundEffects" sid="6925397382313868">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="PuzzlePieces" plugin-id="Sprite" sid="2132446548606477">
+            <members>
+                <member>Puzzle1Pieces</member>
+                <member>Puzzle2Pieces</member>
+                <member>Puzzle3Pieces</member>
+                <member>Puzzle4Pieces</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="originX" sid="9710500797662972" type="number" />
+                <instance-variable name="originY" sid="2011293262395434" type="number" />
+                <instance-variable name="inRange" sid="4030154021714821" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="8666379465392812">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Pulse">
+                    <effect id="pulse" />
+                </effect-type>
+            </effects>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>LoaderLayout.xml</layout>
+        <layout>StartScreen.xml</layout>
+        <layout>Puzzle1.xml</layout>
+        <layout>Puzzle2.xml</layout>
+        <layout>Puzzle3.xml</layout>
+        <layout>Puzzle4.xml</layout>
+        <layout>LevelSelector.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>PuzzleEvents.xml</event-sheet>
+        <event-sheet>LoaderEvents.xml</event-sheet>
+        <event-sheet>NavigationButtonEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="3">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="82" />
+        <global-instance type="LocalStorage" uid="11" />
+        <global-instance type="SoundEffects" uid="13">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="Swipe1_By_f4angy.m4a" />
+        <file name="Swipe1_By_f4angy.ogg" />
+        <file name="Swipe2_By_f4ngy.m4a" />
+        <file name="Swipe2_By_f4ngy.ogg" />
+        <file name="VictoriaRiverPuzzle.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
